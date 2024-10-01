@@ -58,7 +58,7 @@ class _AllowlocationState extends State<Allowlocation> {
                onPressed: () async {
                  final permission = Permission.notification;
                  try {
-                   if(await permission.isDenied){
+                   if(await permission.status.isDenied){
                      await permission.request();
                    }
                  } catch(error){
@@ -82,7 +82,7 @@ class _AllowlocationState extends State<Allowlocation> {
                onPressed: () async {
                  final permission = Permission.notification;
                  try {
-                   if(await permission.isDenied){
+                   if(await permission.status.isDenied){
                      await permission.request();
                    }
                  } catch(error){
