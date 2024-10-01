@@ -16,3 +16,6 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 Assigned me
+
+Components folder has custom usable widgets 
+FETCH folder has fetch to REST API
