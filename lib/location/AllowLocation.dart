@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
+
 
 class Allowlocation extends StatefulWidget {
   const Allowlocation({super.key});
@@ -8,6 +10,17 @@ class Allowlocation extends StatefulWidget {
 }
 
 class _AllowlocationState extends State<Allowlocation> {
+
+  Future<void> requestPermission() async {
+    final permission = Permission.location;
+
+    if (await permission.isDenied) {
+      await permission.request();
+    }
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +54,17 @@ class _AllowlocationState extends State<Allowlocation> {
              width: double.infinity,
              height: 52,
              margin: const EdgeInsets.symmetric(vertical: 15),
-             child: ElevatedButton(onPressed: (){},
+             child: ElevatedButton(
+               onPressed: () async {
+                 final permission = Permission.notification;
+                 try {
+                   if(await permission.isDenied){
+                     await permission.request();
+                   }
+                 } catch(error){
+                    print(error);
+                 }
+               },
                child: const Text('Push notification', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xff182247),
@@ -55,7 +78,17 @@ class _AllowlocationState extends State<Allowlocation> {
              width: double.infinity,
              height: 52,
              margin: const EdgeInsets.symmetric(vertical: 15),
-             child: ElevatedButton(onPressed: (){},
+             child: ElevatedButton(
+               onPressed: () async {
+                 final permission = Permission.notification;
+                 try {
+                   if(await permission.isDenied){
+                     await permission.request();
+                   }
+                 } catch(error){
+                   print(error);
+                 }
+               },
                child: const Text('Precise Location', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xff182247),
@@ -69,7 +102,9 @@ class _AllowlocationState extends State<Allowlocation> {
              width: double.infinity,
              height: 52,
              margin: const EdgeInsets.symmetric(vertical: 15),
-             child: ElevatedButton(onPressed: (){},
+             child: ElevatedButton(
+               onPressed: () async {
+               },
                child: const Text('Background location for driver', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xff182247),

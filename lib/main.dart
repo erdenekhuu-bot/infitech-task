@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: Color(0xffffffff),
-          body: Driverprofile(),
+          body: Allowlocation(),
         ),
     );
   }
