@@ -20,11 +20,27 @@ class _VerifyState extends State<Verify> {
     });
   }
 
+  final TextEditingController tnt1 = TextEditingController();
+  final TextEditingController tnt2 = TextEditingController();
+  final TextEditingController tnt3 = TextEditingController();
+  final TextEditingController tnt4 = TextEditingController();
 
+  final FocusNode _f1 = FocusNode();
+  final FocusNode _f2 = FocusNode();
+  final FocusNode _f3 = FocusNode();
+  final FocusNode _f4 = FocusNode();
 
   @override
   void dispose() {
     // TODO: implement dispose
+    tnt1.dispose();
+    tnt2.dispose();
+    tnt3.dispose();
+    tnt4.dispose();
+    _f1.dispose();
+    _f2.dispose();
+    _f3.dispose();
+    _f4.dispose();
     super.dispose();
   }
 
@@ -69,6 +85,8 @@ class _VerifyState extends State<Verify> {
                       width: MediaQuery.of(context).size.width / 7.5,
                       height: MediaQuery.of(context).size.width / 7.5,
                       child: TextField(
+                        controller: tnt1,
+                        focusNode: _f1,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
                           counterText: '',
@@ -88,6 +106,8 @@ class _VerifyState extends State<Verify> {
                     width: MediaQuery.of(context).size.width / 7.5,
                     height: MediaQuery.of(context).size.width / 7.5,
                     child: TextField(
+                      controller: tnt2,
+                      focusNode: _f2,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                         counterText: '',
@@ -107,6 +127,8 @@ class _VerifyState extends State<Verify> {
                     width: MediaQuery.of(context).size.width / 7.5,
                     height: MediaQuery.of(context).size.width / 7.5,
                     child: TextField(
+                      controller: tnt3,
+                      focusNode: _f3,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                         counterText: '',
@@ -126,6 +148,8 @@ class _VerifyState extends State<Verify> {
                     width: MediaQuery.of(context).size.width / 7.5,
                     height: MediaQuery.of(context).size.width / 7.5,
                     child: TextField(
+                      controller: tnt4,
+                      focusNode: _f4,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                         counterText: '',
