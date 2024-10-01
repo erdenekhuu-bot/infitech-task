@@ -86,7 +86,7 @@ class _AllowlocationState extends State<Allowlocation> {
                      await permission.request();
                    }
                  } catch(error){
-                   print(error);
+                   null;
                  }
                },
                child: const Text('Precise Location', style: TextStyle(color: Color(0xffffffff)),),
