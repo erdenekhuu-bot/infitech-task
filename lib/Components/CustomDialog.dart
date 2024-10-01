@@ -13,10 +13,7 @@ class CustomDialog extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          GestureDetector(
-            onTap: ()  {
-            },
-            child: Container(
+          Container(
               width: double.infinity,
               height: 175,
               decoration: BoxDecoration(
@@ -32,44 +29,53 @@ class CustomDialog extends StatelessWidget {
                       )
                     ],
                   ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 15),
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SvgPicture.asset('images/camera.svg'),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 15),
-                          child: Text('Зураг авах'),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () async {
+
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(vertical: 15),
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SvgPicture.asset('images/camera.svg'),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            child: Text('Зураг авах'),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.7,
                     height: 2,
                     decoration: const BoxDecoration(
-                      color: Color(0xffC8C8C8)
+                        color: Color(0xffC8C8C8)
                     ),
                   ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 15),
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SvgPicture.asset('images/gallery.svg'),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 15),
-                          child: Text('Зургийн сангаас оруулах'),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () async {
+
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(vertical: 15),
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SvgPicture.asset('images/gallery.svg'),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            child: Text('Зургийн сангаас оруулах'),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
               )
-            ),
           ),
           const SizedBox(
             height: 10,
