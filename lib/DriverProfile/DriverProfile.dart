@@ -12,10 +12,10 @@ class _DriverprofileState extends State<Driverprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffffffff),
+      backgroundColor: const Color(0xffffffff),
       appBar: AppBar(
-        backgroundColor: Color(0xffffffffff),
-        title: Text('Жолоочийн мэдээлэл бөглөх', style: TextStyle(fontFamily: 'Inter-Medium')),
+        backgroundColor: const Color(0xffffffffff),
+        title: const Text('Жолоочийн мэдээлэл бөглөх', style: TextStyle(fontFamily: 'Inter-Medium')),
         centerTitle: true,
       ),
       body: ListView(
