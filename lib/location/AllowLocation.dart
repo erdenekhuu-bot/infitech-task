@@ -80,7 +80,7 @@ class _AllowlocationState extends State<Allowlocation> {
              margin: const EdgeInsets.symmetric(vertical: 15),
              child: ElevatedButton(
                onPressed: () async {
-                 final permission = Permission.notification;
+                 final permission = Permission.accessMediaLocation;
                  try {
                    if(await permission.status.isDenied){
                      await permission.request();

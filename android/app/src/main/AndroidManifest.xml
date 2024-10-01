@@ -49,9 +49,4 @@
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
-    <services
-        android:foregroundServiceType="location"
-        android:name="${applicationName}"
-        >
-    </services>
 </manifest>
