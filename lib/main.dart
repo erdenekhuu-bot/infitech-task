@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: const Color(0xffffffff),
-          body: Splashscreen(),
+          body: Maps(),
         ),
     );
   }
