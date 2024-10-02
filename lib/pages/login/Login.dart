@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfffffff),
+      backgroundColor: const Color(0xffffffff),
       body: Form(
         key: login_form,
           child: ListView(
@@ -77,7 +77,7 @@ class _LoginState extends State<Login> {
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 child: ElevatedButton(
                   onPressed: (){
-                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>Register()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const Register()));
                   },
                   child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff)),),
                   style: ElevatedButton.styleFrom(

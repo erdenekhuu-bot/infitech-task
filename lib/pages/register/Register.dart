@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/pages/permission/RequestPermission.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -12,17 +13,23 @@ class _RegisterState extends State<Register> {
   final register_form=GlobalKey<FormState>();
 
   final TextEditingController number_register = TextEditingController();
+  final FocusNode number_focus = FocusNode();
 
   @override
   void dispose() {
     super.dispose();
     number_register.dispose();
+    number_focus.dispose();
   }
+
+  bool _limit=false;
+  String _phone='';
 
   @override
   Widget build(BuildContext context) {
+    _phone.length==0;
     return Scaffold(
-      backgroundColor: const Color(0xfffffff),
+      backgroundColor: const Color(0xffffffff),
       body: Form(
         key: register_form,
           child: ListView(
@@ -40,11 +47,21 @@ class _RegisterState extends State<Register> {
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 height: 52,
                 width: double.infinity,
-                child: const Opacity(
+                child: Opacity(
                     opacity: 0.5,
                     child: TextField(
+                      onChanged: (input_number){
+                         setState(() {
+                           _phone=number_register.text;
+                           if(input_number.length < 8){
+                             _limit = !_limit;
+                           }
+                         });
+                      },
+                      controller: number_register,
+                      focusNode: number_focus,
                       maxLength: 8,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         filled: true,
                         fillColor: Color(0xffE0E2E5),
                         floatingLabelBehavior: FloatingLabelBehavior.never,
@@ -88,16 +105,18 @@ class _RegisterState extends State<Register> {
                 width: double.infinity,
                 height: 52,
                 margin: const EdgeInsets.symmetric(vertical: 5),
-                child: Opacity(
-                    opacity: 0.5,
-                    child: ElevatedButton(onPressed: (){},
-                      child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
+                child: ElevatedButton(
+                  onPressed: _limit ? (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const RequestPermission()));
+                  } : null,
+                    child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xff182247),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)
                           )
-                      ),),)
+                      ),
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

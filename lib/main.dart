@@ -20,15 +20,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: const Color(0xffffffff),
-          body: DriverProfile(),
+          body: Splashscreen(),
         ),
     );
   }

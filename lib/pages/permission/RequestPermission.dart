@@ -13,6 +13,7 @@ class _RequestPermissionState extends State<RequestPermission> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffffffff),
        body: ListView(
          padding: const EdgeInsets.symmetric(horizontal: 30),
          children: [
@@ -116,7 +117,10 @@ class _RequestPermissionState extends State<RequestPermission> {
              width: double.infinity,
              height: 52,
              margin: const EdgeInsets.symmetric(vertical: 15),
-             child: ElevatedButton(onPressed: (){},
+             child: ElevatedButton(
+               onPressed: (){
+                 Navigator.of(context).pop();
+               },
                child: const Text('Татгалзах', style: TextStyle(color: Color(0xff182247), fontWeight: FontWeight.bold)),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xffF8F9FA),
