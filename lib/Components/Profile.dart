@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:task/Components/CustomDialog.dart';
 import 'package:task/Components/Store.dart';
 
@@ -29,10 +30,9 @@ class _ProfileState extends State<Profile> {
                 style: const TextStyle(fontSize: 16, fontFamily: 'Inter', fontWeight: FontWeight.bold),
               ),
               Container(
-                width: 60,
-                height: 60,
+                margin: const EdgeInsets.symmetric(horizontal: 8),
                 child: Center(
-                  child: Image.asset('images/checked.jpg'),
+                  child: SvgPicture.asset('images/checkeds.svg', width: 20, height: 20),
                 ),
               )
             ],
@@ -58,8 +58,18 @@ class _ProfileState extends State<Profile> {
                   );
                 },
                 child: Store.imageCamera == null
-                    ? Image.asset('images/upload.jpg', width: 60, height: 60)
-                    : Image.asset('images/checked.jpg', width: 60, height: 60)
+                    ? Container(
+                         width: 40,
+                         height: 40,
+                           child: Center(
+                             child: SvgPicture.asset('images/uploads.svg', width: 20, height: 20),
+                           ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(60),
+                              color: const Color(0xffE7E7E7)
+                          ),
+                      )
+                    : SvgPicture.asset('images/delete.svg', width: 40, height: 40)
                 ),
             ],
           ),

@@ -68,10 +68,11 @@ flutter:
      - images/car.svg
      - images/cars.jpg
      - images/SplashScreen.jpg
-     - images/upload.jpg
-     - images/checked.jpg
      - images/camera.svg
      - images/gallery.svg
+     - images/uploads.svg
+     - images/checkeds.svg
+     - images/delete.svg
   fonts:
     - family: SemiBold
       fonts:
