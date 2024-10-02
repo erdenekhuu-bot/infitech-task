@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/pages/DriverProfile/DriverDocuments/DriverProfile.dart';
+import 'package:task/pages/DriverProfile/ProfileFinished.dart';
 import 'package:task/pages/login/Login.dart';
 import 'package:task/pages/register/Register.dart';
 import 'package:task/splash/SplashScreen.dart';
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: const Color(0xffffffff),
-          body: Login(),
+          body: Profilefinished(),
         ),
     );
   }
