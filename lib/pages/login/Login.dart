@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:task/register/Register.dart';
+import 'package:task/pages/register/Register.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -112,7 +112,7 @@ class _LoginState extends State<Login> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.15),
+                    margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.16),
                     child: Image.asset('images/cars.jpg'),
                   )
                 ],

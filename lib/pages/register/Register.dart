@@ -124,7 +124,7 @@ class _RegisterState extends State<Register> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.15),
+                    margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.12),
                     child: Image.asset('images/cars.jpg'),
                   )
                 ],

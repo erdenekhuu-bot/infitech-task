@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:task/DriverProfile/DriverProfile.dart';
-import 'package:task/login/Login.dart';
-import 'package:task/register/Register.dart';
+import 'package:task/pages/login/Login.dart';
+import 'package:task/pages/register/Register.dart';
 import 'package:task/splash/SplashScreen.dart';
-import 'package:task/register/Verify.dart';
-import 'package:task/location/AllowLocation.dart';
+import 'package:task/pages/register/OTP.dart';
+import 'package:task/pages/permission/RequestPermission.dart';
+import 'package:task/pages/register/RegisterSuccess.dart';
+import 'package:task/pages/Maps.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,8 +26,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Color(0xffffffff),
-          body: Driverprofile(),
+          backgroundColor: const Color(0xffffffff),
+          body: RequestPermission(),
         ),
     );
   }

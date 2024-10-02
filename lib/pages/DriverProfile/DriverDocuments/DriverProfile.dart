@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:task/Components/Profile.dart';
-import 'dart:io';
 
-class Driverprofile extends StatefulWidget {
-  const Driverprofile({super.key});
+class DriverProfile extends StatefulWidget {
+  const DriverProfile({super.key});
 
   @override
-  State<Driverprofile> createState() => _DriverprofileState();
+  State<DriverProfile> createState() => _DriverProfileState();
 }
 
-class _DriverprofileState extends State<Driverprofile> {
+class _DriverProfileState extends State<DriverProfile> {
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +18,9 @@ class _DriverprofileState extends State<Driverprofile> {
         backgroundColor: const Color(0xffffffffff),
         title: const Text('Жолоочийн мэдээлэл бөглөх', style: TextStyle(fontFamily: 'Inter-Medium')),
         centerTitle: true,
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back_ios)),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30),

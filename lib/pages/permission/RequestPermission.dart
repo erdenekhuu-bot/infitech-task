@@ -2,25 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 
-class Allowlocation extends StatefulWidget {
-  const Allowlocation({super.key});
+class RequestPermission extends StatefulWidget {
+  const RequestPermission({super.key});
 
   @override
-  State<Allowlocation> createState() => _AllowlocationState();
+  State<RequestPermission> createState() => _RequestPermissionState();
 }
 
-class _AllowlocationState extends State<Allowlocation> {
-
-  Future<void> requestPermission() async {
-    final permission = Permission.location;
-
-    if (await permission.isDenied) {
-      await permission.request();
-    }
-  }
-
-
-
+class _RequestPermissionState extends State<RequestPermission> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +18,7 @@ class _AllowlocationState extends State<Allowlocation> {
          children: [
            SizedBox(
              child: null,
-             height: MediaQuery.of(context).size.height * 0.15,
+             height: MediaQuery.of(context).size.height * 0.2,
            ),
            const Row(
              mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +38,7 @@ class _AllowlocationState extends State<Allowlocation> {
                ),
              ],
            ),
-
+           const SizedBox(child: null, height: 70),
            Container(
              width: double.infinity,
              height: 52,
@@ -128,7 +117,7 @@ class _AllowlocationState extends State<Allowlocation> {
              height: 52,
              margin: const EdgeInsets.symmetric(vertical: 15),
              child: ElevatedButton(onPressed: (){},
-               child: const Text('Татгалзах', style: TextStyle(color: Color(0xff182247)),),
+               child: const Text('Татгалзах', style: TextStyle(color: Color(0xff182247), fontWeight: FontWeight.bold)),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xffF8F9FA),
                    shape: RoundedRectangleBorder(

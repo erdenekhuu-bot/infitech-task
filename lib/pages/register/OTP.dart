@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Verify extends StatefulWidget {
+class OTP extends StatefulWidget {
   final int? phone_number;
-  Verify({super.key, this.phone_number});
+  OTP({super.key, this.phone_number});
 
   @override
-  State<Verify> createState() => _VerifyState();
+  State<OTP> createState() => _OTPState();
 }
 
-class _VerifyState extends State<Verify> {
+class _OTPState extends State<OTP> {
 
-  final verify = GlobalKey<FormState>();
+  final otp_key = GlobalKey<FormState>();
   int timer=60;
 
   //count time reverse
@@ -56,7 +56,7 @@ class _VerifyState extends State<Verify> {
     return Scaffold(
       backgroundColor: const Color(0xfffffff),
       body: Form(
-        key: verify,
+        key: otp_key,
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             children: [
