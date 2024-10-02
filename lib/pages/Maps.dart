@@ -30,7 +30,7 @@ class _MapsState extends State<Maps> {
 
   void _setCustomMarker() async {
     BitmapDescriptor customIcon = await BitmapDescriptor.fromAssetImage(
-      ImageConfiguration(size: Size(20, 20)),
+      ImageConfiguration(size: Size(60, 60)),
       'images/Vector.jpg',
     );
     setState(() {
@@ -54,12 +54,6 @@ class _MapsState extends State<Maps> {
           },
           initialCameraPosition: CameraPosition(
               target: LatLng(47.9221, 106.9155), zoom: 10),
-              // markers: Set<Marker>.of({
-              //   Marker(
-              //     markerId: MarkerId("Default location"),
-              //     icon: BitmapDescriptor.defaultMarker,
-              //   ),
-              // }),
               markers: _markers,
       ),
     );

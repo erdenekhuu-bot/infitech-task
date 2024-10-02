@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:task/pages/DriverProfile/DriverDocuments/DriverProfile.dart';
 
 
 class RequestPermission extends StatefulWidget {
@@ -78,6 +79,7 @@ class _RequestPermissionState extends State<RequestPermission> {
                  } catch(error){
                    null;
                  }
+
                },
                child: const Text('Precise Location', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
@@ -94,6 +96,7 @@ class _RequestPermissionState extends State<RequestPermission> {
              margin: const EdgeInsets.symmetric(vertical: 15),
              child: ElevatedButton(
                onPressed: () async {
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>DriverProfile()));
                },
                child: const Text('Background location for driver', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
