@@ -12,13 +12,7 @@ class Maps extends StatefulWidget {
 
 class _MapsState extends State<Maps> {
   late GoogleMapController mapController;
-
-  void _setCustomMarker() async {
-    BitmapDescriptor customIcon = await BitmapDescriptor.fromAssetImage(
-      ImageConfiguration(size: Size(48, 48)),
-      'assets/custom_marker.png',
-    );
-  }
+  final Set<Marker> _markers = {};
 
   @override
   void dispose() {
@@ -28,6 +22,30 @@ class _MapsState extends State<Maps> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _setCustomMarker();
+  }
+
+  void _setCustomMarker() async {
+    BitmapDescriptor customIcon = await BitmapDescriptor.fromAssetImage(
+      ImageConfiguration(size: Size(20, 20)),
+      'images/Vector.jpg',
+    );
+    setState(() {
+      _markers.add(
+        Marker(
+          markerId: MarkerId(''),
+          position: LatLng(47.9221, 106.9155),
+          icon: customIcon,
+        ),
+      );
+    });
+  }
+
+
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
@@ -36,12 +54,13 @@ class _MapsState extends State<Maps> {
           },
           initialCameraPosition: CameraPosition(
               target: LatLng(47.9221, 106.9155), zoom: 10),
-              markers: Set<Marker>.of({
-                Marker(
-                  markerId: MarkerId("Default location"),
-                  icon: BitmapDescriptor.defaultMarker,
-                ),
-              }),
+              // markers: Set<Marker>.of({
+              //   Marker(
+              //     markerId: MarkerId("Default location"),
+              //     icon: BitmapDescriptor.defaultMarker,
+              //   ),
+              // }),
+              markers: _markers,
       ),
     );
   }
