@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:task/Components/Store.dart';
+import 'dart:io';
 
 class CustomDialog extends StatelessWidget {
   CustomDialog({super.key});
@@ -31,7 +33,11 @@ class CustomDialog extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () async {
-
+                      final ImagePicker picker = ImagePicker();
+                      final XFile? image = await picker.pickImage(source: ImageSource.camera);
+                      if (image != null) {
+                        Store.imageCamera=File(image.path);
+                      }
                     },
                     child: Container(
                       margin: const EdgeInsets.symmetric(vertical: 15),
@@ -57,7 +63,11 @@ class CustomDialog extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () async {
-
+                      final ImagePicker picker = ImagePicker();
+                      final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+                      if (image != null) {
+                        Store.imageGallery=File(image.path);
+                      }
                     },
                     child: Container(
                       margin: const EdgeInsets.symmetric(vertical: 15),
