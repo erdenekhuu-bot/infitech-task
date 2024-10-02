@@ -36,7 +36,8 @@ class CustomDialog extends StatelessWidget {
                       final ImagePicker picker = ImagePicker();
                       final XFile? image = await picker.pickImage(source: ImageSource.camera);
                       if (image != null) {
-                        Store.imageCamera=File(image.path);
+                         Store.imageCamera=File(image.path);
+                         // Store.images.add(File(image.path));
                       }
                     },
                     child: Container(

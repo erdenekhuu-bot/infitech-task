@@ -6,4 +6,5 @@ class Store {
     static File? imageCamera;
     static File? imageCameraDriver;
     static File? imageGalleryDriver;
+    static List<File?> images=[];
 }

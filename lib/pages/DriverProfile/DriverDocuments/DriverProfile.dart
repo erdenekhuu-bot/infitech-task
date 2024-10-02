@@ -25,18 +25,10 @@ class _DriverProfileState extends State<DriverProfile> {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         children: [
-              ConstrainedBox(
-                  constraints: const BoxConstraints(maxHeight: 480),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    child: Column(
-                      children: [
-                       for(int i=0; i<10; i++)
-                         Profile(title: 'Жолооны үнэмлэх', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
-                      ],
-                    ),
-                  ),
-              ),
+            Profile(title: 'Жолооны үнэмлэх', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
+            Profile(title: 'Жолооны үнэмлэх', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
+            Profile(title: 'Гэрчилгээ', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
+            Profile(title: 'Гэрчилгээ', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 7),
               child: const Text('* Заавал мэдээлэл илгээх шаардлагатай', style: TextStyle(color: Color(0xffFF0000))),
