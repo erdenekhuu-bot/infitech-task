@@ -34,7 +34,7 @@ class _DriverProfileState extends State<DriverProfile> {
             const Profile(title: 'Гэрчилгээ', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 7),
-              child: const Text('* Заавал мэдээлэл илгээх шаардлагатай', style: TextStyle(color: Color(0xffFF0000))),
+              child: const Text('* Заавал мэдээлэл илгээх шаардлагатай', style: TextStyle(color: custom_colors.color_x9)),
             ),
           SizedBox(
             height: MediaQuery.of(context).size.width / 3,
@@ -48,12 +48,12 @@ class _DriverProfileState extends State<DriverProfile> {
                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Help(title: 'Машины мэдээлэл өгөх', forward: 0)));
               } : null,
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff182247),
+                  backgroundColor: custom_colors.color_x5,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)
                   )
               ),
-              child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
+              child: const Text('Үргэлжлүүлэх', style: TextStyle(color: custom_colors.color_x1)),
             ),
           ),
         ],

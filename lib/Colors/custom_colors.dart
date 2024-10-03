@@ -8,4 +8,7 @@ class custom_colors {
     static const Color color_x5 = Color(0xff182247);
     static const Color color_x6 = Color(0xffF8F9FA);
     static const Color color_x7 = Color(0xffE1E3E8);
+    static const Color color_x8 = Color(0xff4AAF57);
+    static const Color color_x9 = Color(0xffFF0000);
+    static const Color color_x10 = Color(0xffC8C8C8);
 }

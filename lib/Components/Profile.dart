@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:task/Components/Store.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'package:task/Colors/custom_colors.dart';
 
 class Profile extends StatefulWidget {
   final String title;
@@ -71,7 +72,7 @@ class _ProfileState extends State<Profile> {
                     width: MediaQuery.of(context).size.width * 0.7,
                     height: 2,
                     decoration: const BoxDecoration(
-                        color: Color(0xffC8C8C8)
+                        color: custom_colors.color_x10
                     ),
                   ),
                   GestureDetector(

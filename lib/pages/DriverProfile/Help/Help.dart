@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task/Components/CheckList.dart';
 import 'package:task/pages/DriverProfile/ProfileFinished.dart';
-
+import 'package:task/Colors/custom_colors.dart';
 
 class Help extends StatefulWidget {
   final String? title;
@@ -28,7 +28,7 @@ class _HelpState extends State<Help> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xffffffff),
+        backgroundColor: custom_colors.color_x1,
         appBar: AppBar(
           title: Text('${widget.title}', style: const TextStyle(fontFamily: 'Roboto-Medium', fontSize: 14)),
           centerTitle: true,
@@ -70,7 +70,7 @@ class _HelpState extends State<Help> {
                             borderRadius: BorderRadius.circular(15)
                         )
                     ),
-                    child: const Text('Илгээх', style: TextStyle(color: Color(0xffffffff)),),
+                    child: const Text('Илгээх', style: TextStyle(color: custom_colors.color_x1)),
                   ),
                 ),
               ]

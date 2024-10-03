@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task/Colors/custom_colors.dart';
+import 'package:task/pages/DriverProfile/DriverDocuments/DriverProfile.dart';
+import 'package:task/pages/DriverProfile/Help/Help.dart';
 import 'package:task/pages/DriverProfile/ProfileFinished.dart';
 import 'package:task/pages/login/Login.dart';
 import 'package:task/pages/permission/RequestPermission.dart';
@@ -26,7 +28,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: custom_colors.color_x1,
-          body: Register(),
+          body: Splashscreen(),
         ),
     );
   }
