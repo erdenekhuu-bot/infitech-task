@@ -56,7 +56,7 @@ class _HelpState extends State<Help> {
                         Checklist(title: 'Данс эзэмшигчийн нэр', controller: controllers),
                         Checklist(title: 'Дансны дугаар', controller: controllers),
                       ],
-
+                SizedBox(height: MediaQuery.of(context).size.width * 0.5),
                 Container(
                   height: 52,
                   margin: null,
