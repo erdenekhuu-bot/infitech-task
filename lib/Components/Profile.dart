@@ -29,12 +29,12 @@ class _ProfileState extends State<Profile> {
                 widget.title,
                 style: const TextStyle(fontSize: 16, fontFamily: 'Inter', fontWeight: FontWeight.bold),
               ),
-              Container(
+              Store.imageCamera != null ? Container(
                 margin: const EdgeInsets.symmetric(horizontal: 8),
                 child: Center(
                   child: SvgPicture.asset('images/checkeds.svg', width: 20, height: 20),
                 ),
-              )
+              ) : const Text('')
             ],
           ),
           Row(
@@ -53,7 +53,7 @@ class _ProfileState extends State<Profile> {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return Customdialog();
+                      return const Customdialog();
                     },
                   );
                 },
@@ -81,7 +81,7 @@ class _ProfileState extends State<Profile> {
             ],
           ),
           Store.imageCamera == null
-              ? const SizedBox.shrink()
+              ? const Text('')
               : Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16.0), // Adjust radius here

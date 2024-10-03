@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 class Store {
     static File? imageGallery;
     static File? imageCamera;
