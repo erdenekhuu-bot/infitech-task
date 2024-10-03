@@ -68,9 +68,9 @@ class _ProfilefinishedState extends State<Profilefinished> {
             ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 10),
-              child: Text('Дэлгэрэнгүй мэдээлэл авах бол доорх дугаараар холбогдоно уу.'),
+              child: const Text('Дэлгэрэнгүй мэдээлэл авах бол доорх дугаараар холбогдоно уу.', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Roboto-Regular')),
             ),
-            Text('7777-8888', style: TextStyle(fontFamily: 'Roboto-Bold'))
+            const Text('7777-8888', style: TextStyle(fontFamily: 'Roboto-Bold'), textAlign: TextAlign.center)
           ],
       ),
     );

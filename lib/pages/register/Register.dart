@@ -88,17 +88,7 @@ class _RegisterState extends State<Register> {
                   alignment: WrapAlignment.spaceEvenly,
                   spacing: 0.5,
                   children: [
-                     const Text('Та манай', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12),),
-                    GestureDetector(
-                      onTap: (){},
-                      child: const Text('Үйлчилгээний нөхцөл', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12, color: Color(0xff1B254A)),),
-                    ),
-                    const Text(' болон ', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12)),
-                    GestureDetector(
-                      onTap: (){},
-                      child: const Text('Нууцлалын бодлого', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12),),
-                    ),
-                    const Text('-той танилцана уу.', style: TextStyle(fontSize: 12, fontFamily: 'Inter-Bold'),)
+                     const Text('Та манай Үйлчилгээний нөхцөл болон Нууцлалын бодлого -той танилцана уу.', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12), textAlign: TextAlign.center),
                   ],
                 ),
               ),
