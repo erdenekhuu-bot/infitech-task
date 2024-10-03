@@ -61,7 +61,7 @@ class _OTPState extends State<OTP> {
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 15),
                 width: 300,
-                child: Text('Таны ${widget.phone_number == null ? '99102830' : ''} дугаар луу явуулсан кодыг оруулж баталгаажуулна уу.'),
+                child: Text('Таны ${widget.phone_number == null ? '99102830' : ''} дугаар луу явуулсан кодыг оруулж баталгаажуулна уу.', style: TextStyle(color: custom_colors.color_x4)),
               ),
 
               Row(
@@ -159,7 +159,7 @@ class _OTPState extends State<OTP> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                     Text('Код дахин илгээх: 00:${timer.toString().length < 2 ? '0$timer' : timer}'),
+                     Text('Код дахин илгээх: 00:${timer.toString().length < 2 ? '0$timer' : timer}', style: TextStyle(color: custom_colors.color_x3)),
                   ],
                 ),
               ),
