@@ -79,7 +79,8 @@ class _RegisterState extends State<Register> {
                         ),
                       ),
                       autofocus: false,
-                    ),)
+                    ),
+                ),
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 40),
