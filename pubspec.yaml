@@ -76,6 +76,7 @@ flutter:
      - images/Vector.jpg
      - images/arrow-right.svg
      - images/success.svg
+     - images/Info_Circle.svg
   fonts:
     - family: SemiBold
       fonts:
