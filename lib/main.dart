@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:task/Colors/custom_colors.dart';
+import 'package:task/pages/DriverProfile/ProfileFinished.dart';
 import 'package:task/pages/permission/RequestPermission.dart';
 import 'package:task/pages/register/OTP.dart';
+import 'package:task/pages/register/RegisterSuccess.dart';
 import 'package:task/splash/SplashScreen.dart';
 
 void main() {
@@ -22,7 +24,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: custom_colors.color_x1,
-          body: OTP(),
+          body: Profilefinished(),
         ),
     );
   }
