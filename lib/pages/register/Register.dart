@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/pages/permission/RequestPermission.dart';
+import 'package:task/pages/register/OTP.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -98,7 +99,7 @@ class _RegisterState extends State<Register> {
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 child: ElevatedButton(
                   onPressed: _limit ? (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const RequestPermission()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>OTP()));
                   } : null,
                     child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
                       style: ElevatedButton.styleFrom(

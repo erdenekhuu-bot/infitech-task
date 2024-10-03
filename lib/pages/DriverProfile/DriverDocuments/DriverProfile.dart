@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/Components/Profile.dart';
 import 'package:task/Components/Store.dart';
 import 'package:task/pages/DriverProfile/Help/Help.dart';
+import 'package:task/Colors/Colors.dart';
 
 class DriverProfile extends StatefulWidget {
   const DriverProfile({super.key});
@@ -15,9 +16,9 @@ class _DriverProfileState extends State<DriverProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: custom_colors.white,
       appBar: AppBar(
-        backgroundColor: const Color(0xffffffffff),
+        backgroundColor: custom_colors.white,
         title: const Text('Жолоочийн мэдээлэл бөглөх', style: TextStyle(fontFamily: 'Inter-Medium')),
         centerTitle: true,
         leading: IconButton(onPressed: (){

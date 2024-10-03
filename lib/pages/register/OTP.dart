@@ -13,22 +13,11 @@ class _OTPState extends State<OTP> {
   final otp_key = GlobalKey<FormState>();
   int timer=60;
 
-  //count time reverse
-  void countTime(){
-    setState(() {
-      timer-=1;
-    });
-  }
-
   final TextEditingController tnt1 = TextEditingController();
   final TextEditingController tnt2 = TextEditingController();
   final TextEditingController tnt3 = TextEditingController();
   final TextEditingController tnt4 = TextEditingController();
 
-  final FocusNode _f1 = FocusNode();
-  final FocusNode _f2 = FocusNode();
-  final FocusNode _f3 = FocusNode();
-  final FocusNode _f4 = FocusNode();
 
   @override
   void dispose() {
@@ -37,24 +26,18 @@ class _OTPState extends State<OTP> {
     tnt2.dispose();
     tnt3.dispose();
     tnt4.dispose();
-    _f1.dispose();
-    _f2.dispose();
-    _f3.dispose();
-    _f4.dispose();
     super.dispose();
   }
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    countTime();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 1), () async {
+      setState(() {
+        timer-=1;
+      });
+    });
     return Scaffold(
-      backgroundColor: const Color(0xfffffff),
+      backgroundColor: const Color(0xffffffff),
       body: Form(
         key: otp_key,
           child: ListView(
@@ -87,7 +70,6 @@ class _OTPState extends State<OTP> {
                       height: MediaQuery.of(context).size.width / 7.5,
                       child: TextFormField(
                         controller: tnt1,
-                        focusNode: _f1,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
                           counterText: '',
@@ -109,7 +91,6 @@ class _OTPState extends State<OTP> {
                     height: MediaQuery.of(context).size.width / 7.5,
                     child: TextFormField(
                       controller: tnt2,
-                      focusNode: _f2,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                         counterText: '',
@@ -131,7 +112,6 @@ class _OTPState extends State<OTP> {
                     height: MediaQuery.of(context).size.width / 7.5,
                     child: TextFormField(
                       controller: tnt3,
-                      focusNode: _f3,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                         counterText: '',
@@ -152,7 +132,6 @@ class _OTPState extends State<OTP> {
                     height: MediaQuery.of(context).size.width / 7.5,
                     child: TextFormField(
                       controller: tnt4,
-                      focusNode: _f4,
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                         counterText: '',
