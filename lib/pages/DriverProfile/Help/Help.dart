@@ -59,8 +59,8 @@ class _HelpState extends State<Help> {
 
                 Container(
                   height: 52,
-                  margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width / 2.5),
-                  child: ElevatedButton(onPressed: null,
+                  margin: null,
+                  child: ElevatedButton(onPressed: (){},
                     child: const Text('Илгээх', style: TextStyle(color: const Color(0xffffffff)),),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff182247),
