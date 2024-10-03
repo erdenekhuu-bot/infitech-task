@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task/pages/permission/RequestPermission.dart';
 import 'package:task/pages/register/OTP.dart';
 
 class Register extends StatefulWidget {
@@ -28,7 +27,7 @@ class _RegisterState extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
-    _phone.length==0;
+    _phone.isEmpty;
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body: Form(
@@ -51,10 +50,10 @@ class _RegisterState extends State<Register> {
                 child: Opacity(
                     opacity: 0.5,
                     child: TextFormField(
-                      onChanged: (input_number){
+                      onChanged: (inputNumber){
                          setState(() {
                            _phone=number_register.text;
-                           if(input_number.length < 8){
+                           if(inputNumber.length < 8){
                              _limit = !_limit;
                            }
                          });
@@ -85,11 +84,11 @@ class _RegisterState extends State<Register> {
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(0, 2, 0, 40),
-                child: Wrap(
+                child: const Wrap(
                   alignment: WrapAlignment.spaceEvenly,
                   spacing: 0.5,
                   children: [
-                     const Text('Та манай Үйлчилгээний нөхцөл болон Нууцлалын бодлого -той танилцана уу.', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12), textAlign: TextAlign.start),
+                     Text('Та манай Үйлчилгээний нөхцөл болон Нууцлалын бодлого -той танилцана уу.', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12), textAlign: TextAlign.start),
                   ],
                 ),
               ),
@@ -99,15 +98,15 @@ class _RegisterState extends State<Register> {
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 child: ElevatedButton(
                   onPressed: _limit ? (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>OTP()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const OTP()));
                   } : null,
-                    child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xff182247),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)
                           )
                       ),
+                    child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
                 ),
               ),
               Row(

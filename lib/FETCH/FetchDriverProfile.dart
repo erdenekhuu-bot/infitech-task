@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 
 class FetchDriverProfile {
     // Assume fetch from API

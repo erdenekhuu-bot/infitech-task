@@ -28,10 +28,10 @@ class _DriverProfileState extends State<DriverProfile> {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         children: [
-            Profile(title: 'Жолооны үнэмлэх', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
-            Profile(title: 'Жолооны үнэмлэх', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
-            Profile(title: 'Гэрчилгээ', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
-            Profile(title: 'Гэрчилгээ', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
+            const Profile(title: 'Жолооны үнэмлэх', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
+            const Profile(title: 'Жолооны үнэмлэх', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
+            const Profile(title: 'Гэрчилгээ', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
+            const Profile(title: 'Гэрчилгээ', contet: 'Та жолооны үнэмлэхний урд талын зургаа оруулна уу',),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 7),
               child: const Text('* Заавал мэдээлэл илгээх шаардлагатай', style: TextStyle(color: Color(0xffFF0000))),
@@ -45,15 +45,15 @@ class _DriverProfileState extends State<DriverProfile> {
             margin: const EdgeInsets.symmetric(vertical: 15),
             child: ElevatedButton(
               onPressed: Store.imageCamera != null ? (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Help(title: 'Машины мэдээлэл өгөх', forward: 0)));
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>const Help(title: 'Машины мэдээлэл өгөх', forward: 0)));
               } : null,
-              child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff182247),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)
                   )
               ),
+              child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
             ),
           ),
         ],

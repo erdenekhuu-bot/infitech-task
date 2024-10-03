@@ -61,13 +61,13 @@ class _ProfilefinishedState extends State<Profilefinished> {
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Maps(key: UniqueKey())));
                 },
-                child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff), fontFamily: 'Inter-Bold')),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff182247),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)
                     )
-                ),),
+                ),
+                child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff), fontFamily: 'Inter-Bold')),),
             ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 10),

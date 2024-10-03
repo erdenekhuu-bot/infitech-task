@@ -3,7 +3,7 @@ import 'package:task/Colors/custom_colors.dart';
 
 class OTP extends StatefulWidget {
   final int? phone_number;
-  OTP({super.key, this.phone_number});
+  const OTP({super.key, this.phone_number});
 
   @override
   State<OTP> createState() => _OTPState();
@@ -32,11 +32,12 @@ class _OTPState extends State<OTP> {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 1), () async {
-      if(0 < timer)
+    Future.delayed(const Duration(seconds: 1), () async {
+      if(0 < timer) {
         setState(() {
           timer -= 1;
         });
+      }
     });
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
@@ -49,10 +50,10 @@ class _OTPState extends State<OTP> {
                 child: null,
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     child: Text('Дугаар баталгаажуулалт',style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 22)),
                   ),
                 ],
@@ -158,7 +159,7 @@ class _OTPState extends State<OTP> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                     Text('Код дахин илгээх: 00:${timer.toString().length < 2 ? '0'+timer.toString() : timer}'),
+                     Text('Код дахин илгээх: 00:${timer.toString().length < 2 ? '0$timer' : timer}'),
                   ],
                 ),
               ),
@@ -167,13 +168,13 @@ class _OTPState extends State<OTP> {
                   height: 52,
                   margin: const EdgeInsets.symmetric(vertical: 15),
                   child: ElevatedButton(onPressed: (){},
-                    child: const Text('Баталгаажуулах', style: TextStyle(color: custom_colors.color_x1),),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff182247),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)
                         )
                     ),
+                    child: const Text('Баталгаажуулах', style: TextStyle(color: custom_colors.color_x1),),
                   ),
               ),
             ],

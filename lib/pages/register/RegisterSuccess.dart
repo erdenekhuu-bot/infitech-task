@@ -16,7 +16,7 @@ class _RegistersuccessState extends State<Registersuccess> {
         centerTitle: true,
         leading: IconButton(onPressed: (){
           Navigator.pop(context);
-        }, icon: Icon(Icons.arrow_back_ios)),
+        }, icon: const Icon(Icons.arrow_back_ios)),
       ),
       body: ListView(
 

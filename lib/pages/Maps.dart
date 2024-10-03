@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'dart:typed_data';
 
 
 class Maps extends StatefulWidget {
@@ -30,14 +29,14 @@ class _MapsState extends State<Maps> {
 
   void _setCustomMarker() async {
     BitmapDescriptor customIcon = await BitmapDescriptor.fromAssetImage(
-      ImageConfiguration(size: Size(60, 60)),
+      const ImageConfiguration(size: Size(60, 60)),
       'images/Vector.jpg',
     );
     setState(() {
       _markers.add(
         Marker(
-          markerId: MarkerId(''),
-          position: LatLng(47.9221, 106.9155),
+          markerId: const MarkerId(''),
+          position: const LatLng(47.9221, 106.9155),
           icon: customIcon,
         ),
       );
@@ -52,7 +51,7 @@ class _MapsState extends State<Maps> {
           onMapCreated: (GoogleMapController controller) {
             mapController = controller;
           },
-          initialCameraPosition: CameraPosition(
+          initialCameraPosition: const CameraPosition(
               target: LatLng(47.9221, 106.9155), zoom: 10),
               markers: _markers,
       ),

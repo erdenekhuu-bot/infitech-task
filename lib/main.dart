@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task/pages/DriverProfile/DriverDocuments/DriverProfile.dart';
-import 'package:task/pages/DriverProfile/ProfileFinished.dart';
-import 'package:task/pages/login/Login.dart';
-import 'package:task/pages/register/Register.dart';
-import 'package:task/splash/SplashScreen.dart';
 import 'package:task/pages/register/OTP.dart';
-import 'package:task/pages/permission/RequestPermission.dart';
-import 'package:task/pages/register/RegisterSuccess.dart';
-import 'package:task/pages/Maps.dart';
-import 'package:task/pages/DriverProfile/Help/Help.dart';
+import 'package:task/Colors/custom_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,11 +16,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: const Color(0xffffffff),
+          backgroundColor: custom_colors.color_x1,
           body: OTP(),
         ),
     );

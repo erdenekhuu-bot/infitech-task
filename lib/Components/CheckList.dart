@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class Checklist extends StatefulWidget {
   final String? title;
   final TextEditingController? controller;
-  Checklist({super.key, this.title, this.controller});
+  const Checklist({super.key, this.title, this.controller});
 
   @override
   State<Checklist> createState() => _ChecklistState();

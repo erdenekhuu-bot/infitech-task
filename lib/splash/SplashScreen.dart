@@ -15,7 +15,7 @@ class _SplashscreenState extends State<Splashscreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-              builder: (context) => Login()));
+              builder: (context) => const Login()));
     });
     return Scaffold(
          body: Container(

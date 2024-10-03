@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:task/pages/register/Register.dart';
 
 class Login extends StatefulWidget {
@@ -36,7 +35,7 @@ class _LoginState extends State<Login> {
               ),
               Container(
                 margin: const EdgeInsets.only(bottom: 12),
-                child: Text('НЭВТРЭХ',style: TextStyle(fontFamily: 'SemiBold', fontSize: 20)),
+                child: const Text('НЭВТРЭХ',style: TextStyle(fontFamily: 'SemiBold', fontSize: 20)),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -79,13 +78,13 @@ class _LoginState extends State<Login> {
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>const Register()));
                   },
-                  child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff)),),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff182247),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)
                     )
-                ),),
+                ),
+                  child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff)),),),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

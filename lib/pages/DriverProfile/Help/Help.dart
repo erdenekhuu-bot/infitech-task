@@ -6,7 +6,7 @@ import 'package:task/pages/DriverProfile/ProfileFinished.dart';
 class Help extends StatefulWidget {
   final String? title;
   final int? forward;
-  Help({super.key, this.title, this.forward});
+  const Help({super.key, this.title, this.forward});
 
   @override
   State<Help> createState() => _HelpState();
@@ -16,7 +16,7 @@ class _HelpState extends State<Help> {
 
   final Help_form_ley = GlobalKey<FormState>();
 
-  final TextEditingController controllers = new TextEditingController();
+  final TextEditingController controllers = TextEditingController();
 
   @override
   void dispose() {
@@ -64,13 +64,13 @@ class _HelpState extends State<Help> {
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>const Profilefinished()));
                     },
-                    child: const Text('Илгээх', style: TextStyle(color: const Color(0xffffffff)),),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff182247),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)
                         )
                     ),
+                    child: const Text('Илгээх', style: TextStyle(color: Color(0xffffffff)),),
                   ),
                 ),
               ]

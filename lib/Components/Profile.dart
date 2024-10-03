@@ -8,14 +8,14 @@ class Profile extends StatefulWidget {
   final String title;
   final String contet;
 
-  Profile({super.key, required this.title, required this.contet});
+  const Profile({super.key, required this.title, required this.contet});
 
   @override
   State<Profile> createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
-  bool _ontap = false;
+  final bool _ontap = false;
 
 
   //upload and show
@@ -127,7 +127,7 @@ class _ProfileState extends State<Profile> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Column(
         children: [
@@ -170,13 +170,13 @@ class _ProfileState extends State<Profile> {
                     ? Container(
                          width: 40,
                          height: 40,
-                           child: Center(
-                             child: SvgPicture.asset('images/uploads.svg', width: 20, height: 20),
-                           ),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(60),
                               color: const Color(0xffE7E7E7)
                           ),
+                           child: Center(
+                             child: SvgPicture.asset('images/uploads.svg', width: 20, height: 20),
+                           ),
                       )
                     : GestureDetector(
                           onTap: (){

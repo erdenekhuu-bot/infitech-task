@@ -47,7 +47,7 @@ class _RequestPermissionState extends State<RequestPermission> {
              margin: const EdgeInsets.symmetric(vertical: 15),
              child: ElevatedButton(
                onPressed: () async {
-                 final permission = Permission.notification;
+                 const permission = Permission.notification;
                  try {
                    if(await permission.status.isDenied){
                      await permission.request();
@@ -56,13 +56,13 @@ class _RequestPermissionState extends State<RequestPermission> {
                     print(error);
                  }
                },
-               child: const Text('Push notification', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xff182247),
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
+               child: const Text('Push notification', style: TextStyle(color: Color(0xffffffff)),),
              ),
            ),
            Container(
@@ -71,7 +71,7 @@ class _RequestPermissionState extends State<RequestPermission> {
              margin: const EdgeInsets.symmetric(vertical: 15),
              child: ElevatedButton(
                onPressed: () async {
-                 final permission = Permission.accessMediaLocation;
+                 const permission = Permission.accessMediaLocation;
                  try {
                    if(await permission.status.isDenied){
                      await permission.request();
@@ -81,13 +81,13 @@ class _RequestPermissionState extends State<RequestPermission> {
                  }
 
                },
-               child: const Text('Precise Location', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xff182247),
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
+               child: const Text('Precise Location', style: TextStyle(color: Color(0xffffffff)),),
              ),
            ),
            Container(
@@ -96,15 +96,15 @@ class _RequestPermissionState extends State<RequestPermission> {
              margin: const EdgeInsets.symmetric(vertical: 15),
              child: ElevatedButton(
                onPressed: () async {
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=>DriverProfile()));
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>const DriverProfile()));
                },
-               child: const Text('Background location for driver', style: TextStyle(color: Color(0xffffffff)),),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xff182247),
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
+               child: const Text('Background location for driver', style: TextStyle(color: Color(0xffffffff)),),
              ),
            ),
            Row(
@@ -124,13 +124,13 @@ class _RequestPermissionState extends State<RequestPermission> {
                onPressed: (){
                  Navigator.of(context).pop();
                },
-               child: const Text('Татгалзах', style: TextStyle(color: Color(0xff182247), fontWeight: FontWeight.bold)),
                style: ElevatedButton.styleFrom(
                    backgroundColor: const Color(0xffF8F9FA),
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
+               child: const Text('Татгалзах', style: TextStyle(color: Color(0xff182247), fontWeight: FontWeight.bold)),
              ),
            ),
          ],
