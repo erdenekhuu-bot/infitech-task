@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Profilefinished extends StatefulWidget {
   const Profilefinished({super.key});
@@ -13,14 +14,19 @@ class _ProfilefinishedState extends State<Profilefinished> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xffffffffff),
-        title: const Text('Захиалгын дэлгэрэнгүй', style: TextStyle(fontFamily: 'Inter-Medium')),
+        title: const Text('Захиалгын дэлгэрэнгүй', style: TextStyle(fontFamily: 'Roboto-Medium')),
         centerTitle: true,
         leading: IconButton(onPressed: (){
           Navigator.pop(context);
-        }, icon: Icon(Icons.arrow_back_ios)),
+        }, icon: const Icon(Icons.arrow_back_ios)),
       ),
       body: ListView(
-
+          padding: const EdgeInsets.all(30),
+          children: [
+            Center(
+              child: SvgPicture.asset('images/success.svg', width: 120, height: 120),
+            )
+          ],
       ),
     );
   }

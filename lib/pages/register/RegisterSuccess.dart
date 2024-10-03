@@ -12,7 +12,7 @@ class _RegistersuccessState extends State<Registersuccess> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Захиалгын дэлгэрэнгүй'),
+        title: const Text('Захиалгын дэлгэрэнгүй', style: TextStyle(fontFamily: 'Roboto-Medium', fontSize: 16)),
         centerTitle: true,
         leading: IconButton(onPressed: (){
           Navigator.pop(context);

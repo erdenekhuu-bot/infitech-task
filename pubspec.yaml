@@ -75,6 +75,7 @@ flutter:
      - images/delete.svg
      - images/Vector.jpg
      - images/arrow-right.svg
+     - images/success.svg
   fonts:
     - family: SemiBold
       fonts:

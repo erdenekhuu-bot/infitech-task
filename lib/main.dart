@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: const Color(0xffffffff),
-          body: Help(title: 'Банкны мэдээлэл өгөх',forward: 1),
+          body: Profilefinished(),
         ),
     );
   }
