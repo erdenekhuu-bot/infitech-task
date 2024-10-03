@@ -51,7 +51,7 @@ class _ProfilefinishedState extends State<Profilefinished> {
                 ],
               ),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
             Container(
               width: double.infinity,
               height: 52,
