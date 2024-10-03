@@ -68,8 +68,17 @@ class _HelpCarState extends State<HelpCar> {
                   Checklist(title: 'Улсын дугаар', controller: controllers),
 
                 Container(
-                  margin: EdgeInsets.only(top: MediaQuery.of(context).size.width / 2),
-                  child: ElevatedButton(onPressed: (){}, child: const Text('Илгээх')),
+                  height: 52,
+                  margin: EdgeInsets.only(top: MediaQuery.of(context).size.width / 2.5),
+                  child: ElevatedButton(onPressed: (){},
+                    child: const Text('Илгээх', style: TextStyle(color: const Color(0xffffffff)),),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff182247),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)
+                        )
+                    ),
+                  ),
                 ),
               ]
             )
