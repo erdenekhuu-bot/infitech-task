@@ -25,7 +25,21 @@ class _ProfilefinishedState extends State<Profilefinished> {
           children: [
             SizedBox(height: MediaQuery.of(context).size.width / 5),
             SvgPicture.asset('images/success.svg',width: 100, height: 100),
-            Text('Таны бүртгэл амжилттай хийгдлээ', textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontFamily: 'Roboto-Regular', fontWeight: FontWeight.bold))
+            const Text('Таны бүртгэл амжилттай хийгдлээ', textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontFamily: 'Roboto-Regular')),
+            Container(
+              width: double.infinity,
+              height: 52,
+              margin: const EdgeInsets.symmetric(vertical: 5),
+              child: ElevatedButton(
+                onPressed: (){},
+                child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff)),),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xff182247),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)
+                    )
+                ),),
+            ),
           ],
       ),
     );
