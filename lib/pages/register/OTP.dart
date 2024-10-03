@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/Colors/custom_colors.dart';
+import 'package:task/pages/permission/RequestPermission.dart';
 
 class OTP extends StatefulWidget {
   final int? phone_number;
@@ -167,7 +168,9 @@ class _OTPState extends State<OTP> {
                   width: double.infinity,
                   height: 52,
                   margin: const EdgeInsets.symmetric(vertical: 15),
-                  child: ElevatedButton(onPressed: (){},
+                  child: ElevatedButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const RequestPermission()));
+                  },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: custom_colors.color_x5,
                         shape: RoundedRectangleBorder(

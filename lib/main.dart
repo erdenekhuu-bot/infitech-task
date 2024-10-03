@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: custom_colors.color_x1,
-          body: Profilefinished(),
+          body: Splashscreen(),
         ),
     );
   }
