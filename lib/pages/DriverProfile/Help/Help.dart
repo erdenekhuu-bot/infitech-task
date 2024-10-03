@@ -2,38 +2,19 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:task/Components/CheckList.dart';
 
-class HelpBank extends StatefulWidget {
-  const HelpBank({super.key});
+
+class Help extends StatefulWidget {
+  final String? title;
+  final int? forward;
+  Help({super.key, this.title, this.forward});
 
   @override
-  State<HelpBank> createState() => _HelpBankState();
+  State<Help> createState() => _HelpState();
 }
 
-class _HelpBankState extends State<HelpBank> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Form(
-            child: ListView(
-              children: [
+class _HelpState extends State<Help> {
 
-              ],
-            )
-        )
-    );
-  }
-}
-
-class HelpCar extends StatefulWidget {
-  const HelpCar({super.key});
-
-  @override
-  State<HelpCar> createState() => _HelpCarState();
-}
-
-class _HelpCarState extends State<HelpCar> {
-
-  final helpcar_form_ley = GlobalKey<FormState>();
+  final Help_form_ley = GlobalKey<FormState>();
 
   final TextEditingController controllers = new TextEditingController();
 
@@ -49,7 +30,7 @@ class _HelpCarState extends State<HelpCar> {
     return Scaffold(
         backgroundColor: const Color(0xffffffff),
         appBar: AppBar(
-          title: const Text('Машины мэдээлэл өгөх', style: TextStyle(fontFamily: 'Roboto-Medium', fontSize: 14)),
+          title: Text('${widget.title}', style: const TextStyle(fontFamily: 'Roboto-Medium', fontSize: 14)),
           centerTitle: true,
           leading: IconButton(
               onPressed: (){
@@ -58,19 +39,28 @@ class _HelpCarState extends State<HelpCar> {
               icon: const Icon(Icons.arrow_back_ios)),
         ),
         body: Form(
-            key: helpcar_form_ley,
+            key: Help_form_ley,
             child: ListView(
               padding: const EdgeInsets.all(30),
               children: [
-                  Checklist(title: 'Машины төрөл сонгох', controller: controllers),
-                  Checklist(title: 'Машины марк сонгох', controller: controllers),
-                  Checklist(title: 'Машины өнгө сонгох', controller: controllers),
-                  Checklist(title: 'Улсын дугаар', controller: controllers),
+                  if(widget.forward == 0)
+                     ...[
+                       Checklist(title: 'Машины төрөл сонгох', controller: controllers),
+                       Checklist(title: 'Машины марк сонгох', controller: controllers),
+                       Checklist(title: 'Машины өнгө сонгох', controller: controllers),
+                       Checklist(title: 'Улсын дугаар', controller: controllers),
+                     ]
+                  else
+                      ...[
+                        Checklist(title: 'Банк сонгох', controller: controllers),
+                        Checklist(title: 'Данс эзэмшигчийн нэр', controller: controllers),
+                        Checklist(title: 'Дансны дугаар', controller: controllers),
+                      ],
 
                 Container(
                   height: 52,
-                  margin: EdgeInsets.only(top: MediaQuery.of(context).size.width / 2.5),
-                  child: ElevatedButton(onPressed: (){},
+                  margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width / 2.5),
+                  child: ElevatedButton(onPressed: null,
                     child: const Text('Илгээх', style: TextStyle(color: const Color(0xffffffff)),),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff182247),
