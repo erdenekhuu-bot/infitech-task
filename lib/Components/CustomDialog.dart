@@ -42,7 +42,9 @@ class _CustomdialogState extends State<Customdialog> {
                       final ImagePicker picker = ImagePicker();
                       final XFile? image = await picker.pickImage(source: ImageSource.camera);
                       if (image != null) {
-                        Store.imageCamera=File(image.path);
+                        setState(() {
+                          Store.imageCamera=File(image.path);
+                        });
                       }
                     },
                     child: Container(
