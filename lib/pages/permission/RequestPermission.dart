@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:task/pages/DriverProfile/DriverDocuments/DriverProfile.dart';
+import 'package:task/Colors/custom_colors.dart';
 
 
 class RequestPermission extends StatefulWidget {
@@ -14,13 +15,13 @@ class _RequestPermissionState extends State<RequestPermission> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: custom_colors.color_x1,
        body: ListView(
          padding: const EdgeInsets.symmetric(horizontal: 30),
          children: [
            SizedBox(
              child: null,
-             height: MediaQuery.of(context).size.height * 0.2,
+             height: MediaQuery.of(context).size.height * 0.25,
            ),
            const Row(
              mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +37,7 @@ class _RequestPermissionState extends State<RequestPermission> {
                Container(
                  margin: const EdgeInsets.symmetric(vertical: 15),
                  width: 300,
-                 child: const Text('QGO апп нь газрын зураг, хаяг, жолоочийн байршлыг газрын зураг дээр харуулахын тулд систем дээр байршил тогтоох эрх шаарддаг тул ALLOW дээр дарна уу.', textAlign: TextAlign.center,),
+                 child: const Text('QGO апп нь газрын зураг, хаяг, жолоочийн байршлыг газрын зураг дээр харуулахын тулд систем дээр байршил тогтоох эрх шаарддаг тул ALLOW дээр дарна уу.', textAlign: TextAlign.center, style: TextStyle(color: custom_colors.color_x4)),
                ),
              ],
            ),
@@ -57,18 +58,18 @@ class _RequestPermissionState extends State<RequestPermission> {
                  }
                },
                style: ElevatedButton.styleFrom(
-                   backgroundColor: const Color(0xff182247),
+                   backgroundColor: custom_colors.color_x5,
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
-               child: const Text('Push notification', style: TextStyle(color: Color(0xffffffff)),),
+               child: const Text('Push notification', style: TextStyle(color: custom_colors.color_x1)),
              ),
            ),
            Container(
              width: double.infinity,
              height: 52,
-             margin: const EdgeInsets.symmetric(vertical: 15),
+             margin: const EdgeInsets.symmetric(vertical: 5),
              child: ElevatedButton(
                onPressed: () async {
                  const permission = Permission.accessMediaLocation;
@@ -82,12 +83,12 @@ class _RequestPermissionState extends State<RequestPermission> {
 
                },
                style: ElevatedButton.styleFrom(
-                   backgroundColor: const Color(0xff182247),
+                   backgroundColor: custom_colors.color_x5,
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
-               child: const Text('Precise Location', style: TextStyle(color: Color(0xffffffff)),),
+               child: const Text('Precise Location', style: TextStyle(color: custom_colors.color_x1)),
              ),
            ),
            Container(
@@ -99,12 +100,12 @@ class _RequestPermissionState extends State<RequestPermission> {
                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const DriverProfile()));
                },
                style: ElevatedButton.styleFrom(
-                   backgroundColor: const Color(0xff182247),
+                   backgroundColor: custom_colors.color_x5,
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
-               child: const Text('Background location for driver', style: TextStyle(color: Color(0xffffffff)),),
+               child: const Text('Background location for driver', style: TextStyle(color: custom_colors.color_x1)),
              ),
            ),
            Row(
@@ -125,12 +126,12 @@ class _RequestPermissionState extends State<RequestPermission> {
                  Navigator.of(context).pop();
                },
                style: ElevatedButton.styleFrom(
-                   backgroundColor: const Color(0xffF8F9FA),
+                   backgroundColor: custom_colors.color_x6,
                    shape: RoundedRectangleBorder(
                        borderRadius: BorderRadius.circular(10)
                    )
                ),
-               child: const Text('Татгалзах', style: TextStyle(color: Color(0xff182247), fontWeight: FontWeight.bold)),
+               child: const Text('Татгалзах', style: TextStyle(color: custom_colors.color_x5, fontWeight: FontWeight.bold)),
              ),
            ),
          ],
