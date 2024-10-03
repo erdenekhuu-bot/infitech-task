@@ -66,9 +66,14 @@ class _HelpCarState extends State<HelpCar> {
                   Checklist(title: 'Машины марк сонгох', controller: controllers),
                   Checklist(title: 'Машины өнгө сонгох', controller: controllers),
                   Checklist(title: 'Улсын дугаар', controller: controllers),
+
+                Container(
+                  margin: EdgeInsets.only(top: MediaQuery.of(context).size.width / 2),
+                  child: ElevatedButton(onPressed: (){}, child: const Text('Илгээх')),
+                ),
               ]
             )
-        )
+        ),
     );
   }
 }
