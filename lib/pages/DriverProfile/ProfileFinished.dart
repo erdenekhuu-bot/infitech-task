@@ -23,9 +23,9 @@ class _ProfilefinishedState extends State<Profilefinished> {
       body: ListView(
           padding: const EdgeInsets.all(30),
           children: [
-            Center(
-              child: SvgPicture.asset('images/success.svg', width: 120, height: 120),
-            )
+            SizedBox(height: MediaQuery.of(context).size.width / 5),
+            SvgPicture.asset('images/success.svg',width: 100, height: 100),
+            Text('Таны бүртгэл амжилттай хийгдлээ', textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontFamily: 'Roboto-Regular', fontWeight: FontWeight.bold))
           ],
       ),
     );
