@@ -4,9 +4,15 @@ import 'package:image_picker/image_picker.dart';
 import 'package:task/Components/Store.dart';
 import 'dart:io';
 
-class CustomDialog extends StatelessWidget {
-  CustomDialog({super.key});
 
+class Customdialog extends StatefulWidget {
+  const Customdialog({super.key});
+
+  @override
+  State<Customdialog> createState() => _CustomdialogState();
+}
+
+class _CustomdialogState extends State<Customdialog> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -36,8 +42,8 @@ class CustomDialog extends StatelessWidget {
                       final ImagePicker picker = ImagePicker();
                       final XFile? image = await picker.pickImage(source: ImageSource.camera);
                       if (image != null) {
-                         Store.imageCamera=File(image.path);
-                         // Store.images.add(File(image.path));
+                        Store.imageCamera=File(image.path);
+                        //Store.images.add(File(image.path));
                       }
                     },
                     child: Container(

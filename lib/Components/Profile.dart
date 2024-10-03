@@ -53,7 +53,7 @@ class _ProfileState extends State<Profile> {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return CustomDialog();
+                      return Customdialog();
                     },
                   );
                 },
@@ -70,7 +70,11 @@ class _ProfileState extends State<Profile> {
                           ),
                       )
                     : GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            setState(() {
+                              Store.imageCamera = null;
+                            });
+                          },
                           child: SvgPicture.asset('images/delete.svg', width: 40, height: 40)
                       ),
                 ),
