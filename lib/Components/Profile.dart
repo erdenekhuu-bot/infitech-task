@@ -69,7 +69,10 @@ class _ProfileState extends State<Profile> {
                               color: const Color(0xffE7E7E7)
                           ),
                       )
-                    : SvgPicture.asset('images/delete.svg', width: 40, height: 40)
+                    : GestureDetector(
+                          onTap: (){},
+                          child: SvgPicture.asset('images/delete.svg', width: 40, height: 40)
+                      ),
                 ),
             ],
           ),

@@ -82,9 +82,10 @@ class _OTPState extends State<OTP> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                     Container(
+                      margin: null,
                       width: MediaQuery.of(context).size.width / 7.5,
                       height: MediaQuery.of(context).size.width / 7.5,
-                      child: TextField(
+                      child: TextFormField(
                         controller: tnt1,
                         focusNode: _f1,
                         textAlign: TextAlign.center,
@@ -103,9 +104,10 @@ class _OTPState extends State<OTP> {
                       ),
                     ),
                   Container(
+                    padding: null,
                     width: MediaQuery.of(context).size.width / 7.5,
                     height: MediaQuery.of(context).size.width / 7.5,
-                    child: TextField(
+                    child: TextFormField(
                       controller: tnt2,
                       focusNode: _f2,
                       textAlign: TextAlign.center,
@@ -124,9 +126,10 @@ class _OTPState extends State<OTP> {
                     ),
                   ),
                   Container(
+                    padding: null,
                     width: MediaQuery.of(context).size.width / 7.5,
                     height: MediaQuery.of(context).size.width / 7.5,
-                    child: TextField(
+                    child: TextFormField(
                       controller: tnt3,
                       focusNode: _f3,
                       textAlign: TextAlign.center,
@@ -147,7 +150,7 @@ class _OTPState extends State<OTP> {
                   Container(
                     width: MediaQuery.of(context).size.width / 7.5,
                     height: MediaQuery.of(context).size.width / 7.5,
-                    child: TextField(
+                    child: TextFormField(
                       controller: tnt4,
                       focusNode: _f4,
                       textAlign: TextAlign.center,
@@ -169,7 +172,7 @@ class _OTPState extends State<OTP> {
               ),
 
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
+                margin: const EdgeInsets.symmetric(vertical: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

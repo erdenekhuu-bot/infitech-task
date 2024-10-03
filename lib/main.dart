@@ -8,6 +8,7 @@ import 'package:task/pages/register/OTP.dart';
 import 'package:task/pages/permission/RequestPermission.dart';
 import 'package:task/pages/register/RegisterSuccess.dart';
 import 'package:task/pages/Maps.dart';
+import 'package:task/pages/DriverProfile/Help/Help.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: const Color(0xffffffff),
-          body: Profilefinished(),
+          body: HelpCar(),
         ),
     );
   }

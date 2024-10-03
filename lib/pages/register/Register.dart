@@ -49,7 +49,7 @@ class _RegisterState extends State<Register> {
                 width: double.infinity,
                 child: Opacity(
                     opacity: 0.5,
-                    child: TextField(
+                    child: TextFormField(
                       onChanged: (input_number){
                          setState(() {
                            _phone=number_register.text;
@@ -63,7 +63,7 @@ class _RegisterState extends State<Register> {
                       maxLength: 8,
                       decoration: const InputDecoration(
                         filled: true,
-                        fillColor: Color(0xffE0E2E5),
+                        fillColor: Color(0xffF8F9FA),
                         floatingLabelBehavior: FloatingLabelBehavior.never,
                         labelStyle: TextStyle(
                             fontFamily: 'Inter'),

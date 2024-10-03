@@ -52,7 +52,7 @@ class _LoginState extends State<Login> {
                     maxLength: 8,
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xffE0E2E5),
+                      fillColor: Color(0xffF8F9FA),
                       floatingLabelBehavior: FloatingLabelBehavior.never,
                       labelStyle: TextStyle(
                           fontFamily: 'Inter'),
