@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/pages/register/Register.dart';
+import 'package:task/Colors/custom_colors.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -23,7 +24,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: custom_colors.color_x1,
       body: Form(
         key: login_form,
           child: ListView(
@@ -39,7 +40,7 @@ class _LoginState extends State<Login> {
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
-                child: const Text('Та өөрийн бүртгэлээр нэвтрэнэ үү', style: TextStyle(color: Color(0xff606774), fontFamily: 'Inter')),
+                child: const Text('Та өөрийн бүртгэлээр нэвтрэнэ үү', style: TextStyle(color: custom_colors.color_x4, fontFamily: 'Inter')),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -51,7 +52,7 @@ class _LoginState extends State<Login> {
                     maxLength: 8,
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xffF8F9FA),
+                      fillColor: custom_colors.color_x6,
                       floatingLabelBehavior: FloatingLabelBehavior.never,
                       labelStyle: TextStyle(
                           fontFamily: 'Inter'),
@@ -79,19 +80,19 @@ class _LoginState extends State<Login> {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>const Register()));
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff182247),
+                    backgroundColor: custom_colors.color_x5,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)
                     )
                 ),
-                  child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff)),),),
+                  child: const Text('Нэтврэх', style: TextStyle(color: custom_colors.color_x1))),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     margin: const EdgeInsets.symmetric(vertical: 10),
-                    child: const Opacity(opacity: 0.5, child: Text('ЭСВЭЛ', style: TextStyle(fontSize: 13, fontFamily: 'Inter-Semi-Bold')),),
+                    child: const Opacity(opacity: 0.5, child: Text('ЭСВЭЛ', style: TextStyle(fontSize: 13, fontFamily: 'Inter-Semi-Bold'))),
                   )
                 ],
               ),
@@ -103,7 +104,7 @@ class _LoginState extends State<Login> {
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: const Text('Бүртгүүлэх', style: TextStyle(fontSize: 14, fontFamily: 'Inter-Bold', color: Color(0xff182247))),
+                    child: const Text('Бүртгүүлэх', style: TextStyle(fontSize: 14, fontFamily: 'Inter-Bold', color: custom_colors.color_x5)),
                   )
                 ],
               ),

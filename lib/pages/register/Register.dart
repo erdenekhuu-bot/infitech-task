@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/pages/register/OTP.dart';
+import 'package:task/Colors/custom_colors.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -29,7 +30,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     _phone.isEmpty;
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: custom_colors.color_x1,
       body: Form(
         key: register_form,
           child: ListView(
@@ -63,7 +64,7 @@ class _RegisterState extends State<Register> {
                       maxLength: 8,
                       decoration: const InputDecoration(
                         filled: true,
-                        fillColor: Color(0xffF8F9FA),
+                        fillColor: custom_colors.color_x6,
                         floatingLabelBehavior: FloatingLabelBehavior.never,
                         labelStyle: TextStyle(
                             fontFamily: 'Inter'),
@@ -101,12 +102,12 @@ class _RegisterState extends State<Register> {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>const OTP()));
                   } : null,
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xff182247),
+                          backgroundColor: custom_colors.color_x5,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)
                           )
                       ),
-                    child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
+                    child: const Text('Үргэлжлүүлэх', style: TextStyle(color: custom_colors.color_x1)),
                 ),
               ),
               Row(
@@ -126,7 +127,7 @@ class _RegisterState extends State<Register> {
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: const Text('Бүртгүүлэх', style: TextStyle(fontSize: 14, fontFamily: 'Inter-Bold', color: Color(0xff182247))),
+                    child: const Text('Бүртгүүлэх', style: TextStyle(fontSize: 14, fontFamily: 'Inter-Bold', color: custom_colors.color_x5)),
                   )
                 ],
               ),
