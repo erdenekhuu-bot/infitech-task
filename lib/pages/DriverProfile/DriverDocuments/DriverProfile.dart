@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task/Components/Profile.dart';
+import 'package:task/Components/Store.dart';
+import 'package:task/pages/DriverProfile/Help/Help.dart';
 
 class DriverProfile extends StatefulWidget {
   const DriverProfile({super.key});
@@ -20,7 +22,7 @@ class _DriverProfileState extends State<DriverProfile> {
         centerTitle: true,
         leading: IconButton(onPressed: (){
           Navigator.pop(context);
-        }, icon: Icon(Icons.arrow_back_ios)),
+        }, icon: const Icon(Icons.arrow_back_ios)),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -40,7 +42,10 @@ class _DriverProfileState extends State<DriverProfile> {
             width: double.infinity,
             height: 52,
             margin: const EdgeInsets.symmetric(vertical: 15),
-            child: ElevatedButton(onPressed: null,
+            child: ElevatedButton(
+              onPressed: Store.imageCamera != null ? (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Help(title: 'Машины мэдээлэл өгөх', forward: 0)));
+              } : null,
               child: const Text('Үргэлжлүүлэх', style: TextStyle(color: Color(0xffffffff)),),
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff182247),

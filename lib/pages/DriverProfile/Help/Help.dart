@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:task/Components/CheckList.dart';
+import 'package:task/pages/DriverProfile/ProfileFinished.dart';
 
 
 class Help extends StatefulWidget {
@@ -60,7 +60,10 @@ class _HelpState extends State<Help> {
                 Container(
                   height: 52,
                   margin: null,
-                  child: ElevatedButton(onPressed: (){},
+                  child: ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Profilefinished()));
+                    },
                     child: const Text('Илгээх', style: TextStyle(color: const Color(0xffffffff)),),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff182247),

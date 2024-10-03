@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task/pages/Maps.dart';
 
 class Profilefinished extends StatefulWidget {
   const Profilefinished({super.key});
@@ -57,7 +58,9 @@ class _ProfilefinishedState extends State<Profilefinished> {
               height: 52,
               margin: const EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Maps(key: UniqueKey())));
+                },
                 child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff), fontFamily: 'Inter-Bold')),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff182247),
