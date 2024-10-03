@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/Colors/custom_colors.dart';
 
 class OTP extends StatefulWidget {
   final int? phone_number;
@@ -32,9 +33,10 @@ class _OTPState extends State<OTP> {
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 1), () async {
-      setState(() {
-        timer-=1;
-      });
+      if(0 < timer)
+        setState(() {
+          timer -= 1;
+        });
     });
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
@@ -128,6 +130,7 @@ class _OTPState extends State<OTP> {
                     ),
                   ),
                   Container(
+                    margin: null,
                     width: MediaQuery.of(context).size.width / 7.5,
                     height: MediaQuery.of(context).size.width / 7.5,
                     child: TextFormField(
@@ -155,7 +158,7 @@ class _OTPState extends State<OTP> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                     Text('Код дахин илгээх: 00:$timer'),
+                     Text('Код дахин илгээх: 00:${timer.toString().length < 2 ? '0'+timer.toString() : timer}'),
                   ],
                 ),
               ),
@@ -164,7 +167,7 @@ class _OTPState extends State<OTP> {
                   height: 52,
                   margin: const EdgeInsets.symmetric(vertical: 15),
                   child: ElevatedButton(onPressed: (){},
-                    child: const Text('Баталгаажуулах', style: TextStyle(color: Color(0xffffffff)),),
+                    child: const Text('Баталгаажуулах', style: TextStyle(color: custom_colors.color_x1),),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff182247),
                         shape: RoundedRectangleBorder(

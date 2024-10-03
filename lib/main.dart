@@ -25,11 +25,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     print(MediaQuery.of(context).size.width);
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: const Color(0xffffffff),
-          body: Splashscreen(),
+          body: OTP(),
         ),
     );
   }
