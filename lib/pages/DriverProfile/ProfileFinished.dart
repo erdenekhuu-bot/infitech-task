@@ -51,17 +51,18 @@ class _ProfilefinishedState extends State<Profilefinished> {
                 ],
               ),
             ),
+            const SizedBox(height: 50),
             Container(
               width: double.infinity,
               height: 52,
               margin: const EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
                 onPressed: (){},
-                child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff)),),
+                child: const Text('Нэтврэх', style: TextStyle(color: Color(0xffffffff), fontFamily: 'Inter-Bold')),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff182247),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
+                        borderRadius: BorderRadius.circular(15)
                     )
                 ),),
             ),
