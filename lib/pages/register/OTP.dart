@@ -40,7 +40,7 @@ class _OTPState extends State<OTP> {
       }
     });
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: custom_colors.color_x1,
       body: Form(
         key: otp_key,
           child: ListView(
@@ -80,7 +80,7 @@ class _OTPState extends State<OTP> {
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
                               width: 1,
-                              color: Color(0xffE1E3E8),
+                              color: custom_colors.color_x7,
                             ),
                           ),
                           border: const OutlineInputBorder(),
@@ -101,7 +101,7 @@ class _OTPState extends State<OTP> {
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: const BorderSide(
                             width: 1,
-                            color: Color(0xffE1E3E8),
+                            color: custom_colors.color_x7,
                           ),
                         ),
                         border: const OutlineInputBorder(),
@@ -122,7 +122,7 @@ class _OTPState extends State<OTP> {
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: const BorderSide(
                             width: 1,
-                            color: Color(0xffE1E3E8),
+                            color: custom_colors.color_x7,
                           ),
                         ),
                         border: const OutlineInputBorder(),
@@ -143,7 +143,7 @@ class _OTPState extends State<OTP> {
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: const BorderSide(
                             width: 1,
-                            color: Color(0xffE1E3E8),
+                            color: custom_colors.color_x7,
                           ),
                         ),
                         border: const OutlineInputBorder(),
@@ -169,12 +169,12 @@ class _OTPState extends State<OTP> {
                   margin: const EdgeInsets.symmetric(vertical: 15),
                   child: ElevatedButton(onPressed: (){},
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff182247),
+                        backgroundColor: custom_colors.color_x5,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)
                         )
                     ),
-                    child: const Text('Баталгаажуулах', style: TextStyle(color: custom_colors.color_x1),),
+                    child: const Text('Баталгаажуулах', style: TextStyle(color: custom_colors.color_x1)),
                   ),
               ),
             ],
