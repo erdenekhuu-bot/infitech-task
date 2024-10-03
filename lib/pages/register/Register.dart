@@ -88,7 +88,7 @@ class _RegisterState extends State<Register> {
                   alignment: WrapAlignment.spaceEvenly,
                   spacing: 0.5,
                   children: [
-                     const Text('Та манай Үйлчилгээний нөхцөл болон Нууцлалын бодлого -той танилцана уу.', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12), textAlign: TextAlign.center),
+                     const Text('Та манай Үйлчилгээний нөхцөл болон Нууцлалын бодлого -той танилцана уу.', style: TextStyle(fontFamily: 'Inter-Bold', fontSize: 12), textAlign: TextAlign.start),
                   ],
                 ),
               ),
