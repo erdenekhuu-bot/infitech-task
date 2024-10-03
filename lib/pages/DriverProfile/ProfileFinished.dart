@@ -66,6 +66,11 @@ class _ProfilefinishedState extends State<Profilefinished> {
                     )
                 ),),
             ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              child: Text('Дэлгэрэнгүй мэдээлэл авах бол доорх дугаараар холбогдоно уу.'),
+            ),
+            Text('7777-8888', style: TextStyle(fontFamily: ''))
           ],
       ),
     );
